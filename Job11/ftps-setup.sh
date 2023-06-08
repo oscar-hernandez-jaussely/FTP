@@ -22,9 +22,9 @@ mkdir -p /etc/proftpd/ssl
 
 echo -e "FR\nFrance\nMarseille\nLaPlateforme\nCyber\nMat\nmatatlaplateforme.io\n" | openssl req -new -x509 -keyout /etc/proftpd/ssl/proftpd.key.pem -days 365 -nodes -out /etc/proftpd/ssl/proftpd.cert.pem
 
-cp config-files/proftpd.conf /etc/proftpd
-cp config-files/tls.conf /etc/proftpd/tls.conf
-cp config-files/modules.conf /etc/proftpd/modules.conf
+cp config-files/proftpd.conf /etc/proftpd/
+cp config-files/tls.conf /etc/proftpd/
+cp config-files/modules.conf /etc/proftpd/
 
 systemctl restart proftpd
 
